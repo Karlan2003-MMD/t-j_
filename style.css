@@ -1,0 +1,198 @@
+.logo {
+  width: 0, 600px;
+  height: 200px;
+  align-items: flex-start;
+  margin: auto;
+}
+
+.menu {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(230, 213, 192);
+}
+
+.header_content {
+  display: grid;
+  font-size: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: subgrid;
+  margin: 30px;
+}
+
+.header_content h2 {
+  font-size: 40px;
+  color: cornflowerblue;
+  justify-content: center;
+}
+
+.product_list_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Hvert kort skal have 6 rækker, én pr. direkte barn i article */
+  grid-auto-rows: auto;
+  gap: 1rem;
+}
+
+.soldout_tag {
+  display: none;
+}
+
+.soldout * {
+  opacity: 50%;
+}
+
+.soldout .soldout_tag {
+  display: block;
+  position: absolute;
+}
+
+.nav {
+  display: flex;
+}
+
+/*********************/
+
+.categories {
+  padding: 50px;
+}
+
+.categories h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: rgb(3, 3, 3);
+}
+
+.categories_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.categories_box {
+  background-color: cornflowerblue;
+  border: 5px solid beige;
+  height: 120px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.categories_box a {
+  color: beige;
+  font-size: 30px;
+  margin: 0;
+}
+
+.product_page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 30px;
+}
+
+.product_image {
+  width: 100%;
+}
+
+.product {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 5; /* se punkt 3 */
+}
+
+.product_info {
+  padding: 30px;
+  margin: 10px;
+  gap: auto;
+}
+
+.product_info h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: cornflowerblue;
+}
+
+.product_info h2 {
+  margin-top: 30px;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.brand {
+  font-size: 15px;
+}
+
+.prices {
+  font-size: 15px;
+  font-weight: bold;
+  color: cornflowerblue;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.product_info select {
+  display: block;
+  margin-top: 15px;
+  padding: 15px;
+  width: 120px;
+  font-weight: bold;
+}
+
+.product_info button {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: cornflowerblue;
+  color: black;
+  border: 20px;
+  cursor: pointer;
+}
+
+.sold {
+  opacity: 50%;
+}
+
+/*************** mobil ***********/
+
+@media (max-width: 800px) {
+  .categories_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .product_page {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .menu {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+}
